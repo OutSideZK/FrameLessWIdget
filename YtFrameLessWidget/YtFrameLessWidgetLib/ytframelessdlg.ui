@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>YtFrameLessDlg</class>
+ <widget class="QDialog" name="YtFrameLessDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>809</width>
+    <height>460</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget #Widget,#Dialog,#YtFrameLessDlg,#MainDlg{
+background-color: rgba(68, 74, 88, 150);
+border: 1px solid rgb(40, 39, 57);
+color: rgb(221, 221, 221);
+font: 10pt &quot;Segoe UI&quot;;
+border-radius: 3px;
+}
+
+/*QToolTip*/
+QToolTip {
+	color: #ffffff;
+	background-color: rgba(33, 37, 43, 180);
+	border: 1px solid rgb(44, 49, 58);
+	border-radius: 3px;
+	font:bold 16pt &quot;微软雅黑&quot;;
+	background-image: none;
+	background-position: left center;
+    background-repeat: no-repeat;
+	/*border-left: 2px solid rgb(255, 121, 198);*/
+	border-left: 2px solid rgb(255, 0, 0);
+	text-align: left;
+	padding-left: 8px;
+	margin: 0px;
+}
+
+/*QMenu*/
+QMenu
+{
+    color:#f1f1f1;
+	font:bold 11pt &quot;微软雅黑&quot;;
+	background-color: rgba(68, 74, 88, 150);
+	border-radius: 6px; 
+}
+QMenu::item
+{
+    color:rgb(255,255,255);
+	padding-left:3px;
+	padding-right:2px;
+	height:30px;
+	border:1px solid #f1f1f1;
+    border-left:2px solid #81bf5f;
+}
+QMenu::item:selected
+{
+	border:2px solid #579abe;
+}
+
+QLabel{
+color:#f1f1f1;
+font:bold 10pt &quot;微软雅黑&quot;;
+background: transparent;
+border-radius:3px;
+}
+
+QLabel#LabelMessage{
+color:#f1f1f1;
+font:bold 16pt &quot;微软雅黑&quot;;
+background: transparent;
+border-radius: 3px;
+}
+
+QLabel#labelTitle{
+font:bold 12pt &quot;微软雅黑&quot;;
+color:#f1f1f1;
+border-radius: 3px;
+}
+
+/*QLineEdit*/
+QLineEdit {
+color:#f1f1f1;
+font:bold 10pt &quot;微软雅黑&quot;;
+background: transparent;
+border: 1px solid #f1f1f1;
+border-radius: 3px;
+}
+QLineEdit::hover{
+border:1px solid #579abe;
+}
+QLineEdit:pressed{
+border:1px solid #579abe;
+}
+QLineEdit:disabled{
+border:2px solid #6f6f6f;
+color: rgb(217, 225, 219);
+border-radius: 3px;
+}
+
+/*QTextEdit*/
+QTextEdit{
+	color:#f1f1f1;
+	font:bold 10pt &quot;微软雅黑&quot;;
+	background: transparent;
+	border: 1px solid #f1f1f1;
+	border-radius: 3px;
+}
+
+QTextEdit::disabled{
+	color:#f1f1f1;
+	font:bold 10pt &quot;微软雅黑&quot;;
+	background: transparent;
+	border: 2px solid #6f6f6f;
+	border-radius: 3px;
+}
+
+QTextEdit::hover{
+border:1px solid #579abe;
+}
+QTextEdit:pressed{
+border:1px solid #579abe;
+}
+
+/*QGroupBox*/
+QGroupBox {
+font:bold 11pt &quot;微软雅黑&quot;;
+color:#f1f1f1;
+border: 1px solid #f1f1f1;
+margin-top:3ex;
+border-radius: 3px;
+/*padding-top:10px;*/
+}
+
+QGroupBox::title
+{
+subcontrol-origin:margin;
+padding:0 3px;
+}
+
+/*SpinBox*/
+QSpinBox {
+border-width: 1px;
+border-style: solid;
+border-color: #f1f1f1;
+color: #f1f1f1;
+font: 75 10pt &quot;微软雅黑&quot;;
+background: transparent;
+border-radius: 3px;
+}
+
+QSpinBox::disabled {
+border-width: 2px;
+border-style: solid;
+border-color: #6f6f6f;
+color: #f1f1f1;
+font: 75 10pt &quot;微软雅黑&quot;;
+background: transparent;
+border-radius: 3px;
+}
+
+QSpinBox::hover {
+border:1px solid #579abe;
+}
+
+QSpinBox::press {
+border:1px solid #579abe;
+}
+
+QSpinBox::up-arrow {   
+image: url(:/btnicon/image/btnicon/up_enable.png);
+width:18;
+}
+
+QSpinBox::up-arrow::disabled {   
+image: url(:/btnicon/image/btnicon/up_disable.png);
+width:18;
+}
+
+QSpinBox::down-arrow {
+image: url(:/btnicon/image/btnicon/down_enable.png);
+width:18;
+}
+
+QSpinBox::down-arrow::disabled {
+image: url(:/btnicon/image/btnicon/down_disable.png);
+width:18;
+}
+
+QSpinBox::up-button {
+subcontrol-origin: border;
+subcontrol-position: top right;
+border-radius: 3px;
+width: 35px;
+border-width: 1px;
+}
+
+QSpinBox::down-button {
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+border-radius: 3px;
+width: 35px;
+border-width: 1px;
+border-top-width: 0;
+}
+
+/*Double SpinBox*/
+QDoubleSpinBox {
+border-width: 1px;
+border-style: solid;
+border-color: #f1f1f1;
+color: #f1f1f1;
+font: 75 10pt &quot;微软雅黑&quot;;
+background: transparent;
+border-radius: 3px;
+}
+
+QDoubleSpinBox::disabled {
+border-width: 2px;
+border-style: solid;
+border-color: #6f6f6f;
+color: #f1f1f1;
+font: 75 10pt &quot;微软雅黑&quot;;
+background: transparent;
+border-radius: 3px;
+}
+
+QDoubleSpinBox::hover {
+border:1px solid #579abe;
+}
+
+QDoubleSpinBox::press {
+border:1px solid #579abe;
+}
+
+QDoubleSpinBox::up-arrow {   
+image: url(:/btnicon/image/btnicon/up_enable.png);
+width:18;
+}
+
+QDoubleSpinBox::up-arrow::disabled {   
+image: url(:/btnicon/image/btnicon/up_disable.png);
+width:18;
+}
+
+QDoubleSpinBox::down-arrow {
+image: url(:/btnicon/image/btnicon/down_enable.png);
+width:18;
+}
+
+QDoubleSpinBox::down-arrow::disabled {
+image: url(:/btnicon/image/btnicon/down_disable.png);
+width:18;
+}
+
+QDoubleSpinBox::up-button {
+subcontrol-origin: border;
+border-radius: 3px;
+width: 35px;
+}
+
+QDoubleSpinBox::down-button {
+subcontrol-origin: border;
+border-radius: 3px;
+width: 35px;
+}
+
+/*QComboBox*/
+QComboBox {
+background-color: transparent;
+border-style: solid; 
+border-width: 1px; 
+border-radius: 3px; 
+border-color: #f1f1f1; 
+font: bold 10pt &quot;微软雅黑&quot;;
+color: #f1f1f1;
+}
+
+QComboBox::disabled {
+background-color: transparent;
+border-style: solid; 
+border-width: 2px; 
+border-radius: 2px; 
+border-color: #6f6f6f; 
+font: bold 10pt &quot;微软雅黑&quot;;
+color: #f1f1f1;
+}
+
+QComboBox::hover{
+border:1px solid #579abe;
+}
+
+QComboBox::press{
+border:1px solid #579abe;
+}
+
+QComboBox QAbstractItemView {
+background-color: #579abe;
+border-style: outset; 
+border-width: 1px; 
+border-radius: 6px; 
+border-color: gray;
+font:  13px;
+color:#f1f1f1;
+padding-left: 5px; 
+}
+
+QComboBox::drop-down {
+subcontrol-origin: padding;
+subcontrol-position: top right;
+width: 22px;
+border-left-width: 1px;
+border-left-color: #1e1d23;
+border-top-right-radius: 12px; /* same radius as the QComboBox */
+border-bottom-right-radius: 12px;
+}
+
+QComboBox::down-arrow {
+image: url(:/btnicon/image/btnicon/down_enable.png);
+width: 20px;
+padding-right:10px;
+}
+
+QComboBox::down-arrow::disabled {
+image: url(:/btnicon/image/btnicon/down_disable.png);
+width: 20px;
+}
+
+/*QTimeEdit*/
+QTimeEdit,QDateEdit,QDateTimeEdit{
+background-color: transparent;
+border-style: solid; 
+border-width: 1px; 
+border-radius: 3px; 
+border-color: #f1f1f1; 
+font: bold 10pt &quot;微软雅黑&quot;;
+color: #f1f1f1;
+}
+
+QTimeEdit::disabled,QDateEdit::disabled,QDateTimeEdit::disabled{
+background-color: transparent;
+border-style: solid; 
+border-width: 2px; 
+border-radius: 3px; 
+border-color: #6f6f6f; 
+font: bold 10pt &quot;微软雅黑&quot;;
+color: #f1f1f1;
+}
+
+QTimeEdit::up-arrow,QDateEdit::up-arrow,QDateTimeEdit::up-arrow {   
+image: url(:/btnicon/image/btnicon/up_enable.png);
+width:18;
+}
+
+QTimeEdit::up-arrow::disabled,QDateEdit::up-arrow::disabled,QDateTimeEdit::up-arrow::disabled {   
+image: url(:/btnicon/image/btnicon/up_disable.png);
+width:18;
+}
+
+QTimeEdit::down-arrow,QDateEdit::down-arrow,QDateTimeEdit::down-arrow {
+image: url(:/btnicon/image/btnicon/down_enable.png);
+width:18;
+}
+
+QTimeEdit::down-arrow::disabled,QDateEdit::down-arrow:disabled,QDateTimeEdit::down-arrow::disabled {
+image: url(:/btnicon/image/btnicon/down_disable.png);
+width:18;
+}
+
+QTimeEdit::up-button,QDateEdit::up-button,QDateTimeEdit::up-button {
+subcontrol-origin: border;
+border-radius: 5px;
+width: 35px;
+}
+
+QTimeEdit::down-button,QDateEdit::down-button,QDateTimeEdit::down-button {
+subcontrol-origin: border;
+border-radius: 5px;
+width: 35px;
+}
+
+/*QPushButton*/
+QPushButton{
+width:transparent;
+border-style: solid;
+border-width: 2px;
+padding: 2px;
+font: bold 12pt;
+background-color: #579abe;
+border-radius: 3px;
+}
+
+QPushButton::default{
+	border-style: solid;
+	border-top-color: #579abe;
+	border-right-color: #579abe;
+	border-left-color: #579abe;
+	border-bottom-color: #579abe;
+	border-width: 1px;
+	color: #a9b7c6;
+	padding: 2px;
+	background-color: #579abe;
+}
+QPushButton:hover{
+	border-style: solid;
+	border-top-color: #f1f1f1;
+	border-right-color: #f1f1f1;
+	border-left-color: #f1f1f1;
+	border-bottom-color: #f1f1f1;
+	border-bottom-width: 1px;
+	border-style: solid;
+	color: #f1f1f1;
+	padding-bottom: 2px;
+	background-color: #579abe;
+}
+QPushButton:pressed{
+	border-style: solid;
+	border-top-color: #f1f1f1;
+	border-right-color: #f1f1f1;
+	border-left-color: #f1f1f1;
+	border-bottom-color: #f1f1f1;
+	border-bottom-width: 2px;
+	border-style: solid;
+	color: #e67e22;
+	padding-bottom: 1px;
+	background-color: #579abe;
+}
+QPushButton:disabled{
+	border-style: solid;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	border-bottom-width: 2px;
+	border-style: solid;
+	color: #808086;
+	padding-bottom: 1px;
+	background-color: #afd7e3;
+}
+QPushButton#btnMin,#btnMax,#btnClose,#btnTooltip{
+background-color:transparent;
+}
+
+/*QTableWidget*/
+QTableWidget{
+color: #f1f1f1;
+background-color: transparent;
+font: bold 10pt &quot;微软雅黑&quot;;
+border:1px solid #f1f1f1;
+gridline-color: rgb(77, 134, 190);
+border-radius: 3px; 
+}
+
+QTableWidget::item
+{
+    color: #f1f1f1;
+}
+
+QTableWidget::item:hover{
+	border:1px solid #f1f1f1;
+}
+
+QTableWidget::item::selected
+{
+    color: #f1f1f1;
+    border:1px solid #f1f1f1;
+	background-color: transparent;
+}
+
+/*左上角全选按钮背景色*/
+QTableCornerButton::section{
+	background-color:transparent;
+}
+
+QHeaderView::section {
+	background-color:transparent;
+	margin:0px;
+	color:#f1f1f1;
+	font: 700 10pt &quot;微软雅黑&quot;;
+	border:1px solid #579abe;
+}
+
+QHeaderView::section:hover{
+    border:1px solid #f1f1f1;
+}
+
+QHeaderView::section:selected {
+	background-color:#579abe;
+	margin:0px;
+	color:#f1f1f1;
+	font: 700 12pt &quot;微软雅黑&quot;;
+	border:2px solid #f1f1f1;
+}
+
+/*QListWidget*/
+QListWidget
+{
+color:#f1f1f1;
+border:1px solid #f1f1f1;
+background-color: rgb(30, 29, 35);
+font: bold 11pt &quot;微软雅黑&quot;;
+border-radius: 3px; 
+}
+/**列表项*/
+QListWidget::item
+{
+    color:rgb(200,200,200);
+    height:40px;
+    padding-left:20px;
+    border:0px solid gray;
+}
+/**列表项扫过*/
+QListWidget::item:hover
+{
+    color:#f1f1f1;
+    background:rgb(77, 134, 190);
+   
+}
+/**列表项选中*/
+QListWidget::item::selected:active
+{ 
+    color:#f1f1f1;
+    background:rgb(77, 134, 190);
+}
+QListWidget::item:selected
+{
+    color:#f1f1f1;
+    background:rgb(77, 134, 190);
+}
+
+/*QTabWidget*/
+QTabWidget {
+color:#f1f1f1;
+background-color: transparent;
+border: 1px solid #f1f1f1;
+border-radius: 3px; 
+}
+
+QTabWidget::pane{
+	border:1px solid #f1f1f1;
+	background-color: transparent;
+}
+
+QTabBar
+{
+    left: 5px; /* move to the right by 5px */
+    border-radius: 3px;
+	border:1px solid #f1f1f1;
+    color: #f1f1f1;
+    font: bold 11pt &quot;微软雅黑&quot;;
+	background-color: transparent;
+}
+
+QTabBar:focus
+{
+    border: 1px transparent #f1f1f1;
+}
+
+/* TOP TABS */
+QTabBar::tab:top {
+    border: 0px solid #f1f1f1;
+    border-bottom: 0px transparent;
+    background-color: #579abe;
+    padding: 5px;
+    min-width: 100px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+/* BOTTOM TABS */
+QTabBar::tab:bottom {
+    border: 0px solid #f1f1f1;
+    border-bottom: 0px transparent;
+    background-color: #579abe;
+    padding: 5px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    min-width: 100px;
+}
+
+/* LEFT TABS */
+QTabBar::tab:left {
+    border: 0px solid #f1f1f1;
+    border-bottom: 0px transparent;
+    background-color: #579abe;
+    padding: 5px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    min-height: 100px;
+}
+
+/* RIGHT TABS */
+QTabBar::tab:right {
+    border: 0px solid #f1f1f1;
+    border-bottom: 0px transparent;
+    background-color: #579abe;
+    padding: 5px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    min-height: 100px;
+}
+
+/*没有选中的tab*/
+QTabBar::tab:!selected
+{
+    background-color: #6f6f6f;
+	color:#f1f1f1;
+}
+
+/*TreeWidget*/
+QTreeWidget{
+	color:#f1f1f1;
+	background-color: transparent;
+	border: 1px solid #f1f1f1;
+	border-radius: 3px; 
+}
+
+/*TreeView*/
+QTreeView{
+	color:#f1f1f1;
+	background-color: transparent;
+	border: 1px solid #f1f1f1;
+	border-radius: 3px; 
+}
+
+/*ListView*/
+QListView{
+	color:#f1f1f1;
+	background-color: transparent;
+	border: 1px solid #f1f1f1;
+	border-radius: 3px; 
+}
+
+/*TableView*/
+QTableView{
+	color:#f1f1f1;
+	background-color: transparent;
+	border: 1px solid #f1f1f1;
+	border-radius: 3px; 
+}
+
+/*鼠标悬停在没有选中的tab上*/
+QTabBar::tab:!selected:hover {
+    color: white;
+    border:2px solid #f1f1f1;
+}
+
+QAbstractScrollArea
+{
+	background-color: transparent;
+}
+
+/*Check Box*/
+QCheckBox{
+font: 75 11pt &quot;微软雅黑&quot;;
+color: #ffffff;
+}
+
+QCheckBox::indicator:enabled:unchecked
+{
+width: 50px;height: 30px;
+image: url(:/btnicon/image/btnicon/cb_close.png);
+}
+
+QCheckBox::indicator:enabled:checked
+{
+width: 50px;height: 30px;
+image: url(:/btnicon/image/btnicon/cb_open.png);
+}
+
+
+QCheckBox::indicator:disabled:unchecked
+{
+width: 50px;height: 30px;
+image: url(:/btnicon/image/btnicon/cb_close_disable.png);
+}
+
+QCheckBox::indicator:disabled:checked
+{
+width: 50px;height: 30px;
+image: url(:/btnicon/image/btnicon/cb_open_disable.png);
+}
+
+/*RadioButton*/
+QRadioButton{
+font: 75 11pt &quot;微软雅黑&quot;;
+color: #ffffff;
+}
+QRadioButton::indicator:enabled:unchecked
+{
+width: 50px;height: 30px;
+image: url(:/btnicon/image/btnicon/radio_unselect_enable.png);
+}
+
+QRadioButton::indicator:enabled:checked
+{
+width: 50px;height: 30px;
+image: url(:/btnicon/image/btnicon/radio_select_enable.png);
+}
+
+
+QRadioButton::indicator:disabled:unchecked
+{
+width: 50px;height: 30px;
+image: url(:/btnicon/image/btnicon/radio_unselect_disable.png);
+}
+
+QRadioButton::indicator:disabled:checked
+{
+width: 50px;height: 30px;
+image: url(:/btnicon/image/btnicon/radio_select_disable.png);
+}
+
+QScrollBar:vertical{ 
+    width:8px;  
+    border-style:flat;
+    border-radius: 4px;
+    border:0px;
+     background: #19191A;
+} 
+QScrollBar::handle:vertical{ 
+    background: rgba(255,255,255,0.50);
+    border-radius: 4px;
+    width:8px; 
+    min-height:91px; 
+    border-style:flat;
+}
+QScrollBar::handle:vertical::hover{ 
+    background: rgba(255,255,255,0.90);
+    border-radius: 4px;
+    width:8px; 
+}
+QScrollBar::handle:vertical::pressed{ 
+    background: rgba(255,255,255,0.90);
+    border-radius:4px;
+    width:8px; 
+}
+QScrollBar::sub-page:vertical {
+    background: #19191A;
+border-style:flat;
+}
+QScrollBar::add-page:vertical {
+   background: #19191A;
+border-style:flat;
+}
+QScrollBar::add-line:vertical{
+   background: #19191A;
+}
+QScrollBar::sub-line:vertical {
+   background: #19191A;
+}
+QScrollBar:horizontal{ 
+    height:8px;  
+    border-style:flat;
+    border-radius: 4px;
+    border:0px;
+background: #19191A;
+} 
+QScrollBar::handle:horizontal{ 
+    background: rgba(255,255,255,0.50);
+    border-radius: 4px;
+    height:8px; 
+    min-width:91px; 
+    border-style:flat;
+}
+QScrollBar::handle:horizontal::hover{ 
+    background: rgba(255,255,255,0.90);
+    border-radius: 4px;
+    height:8px; 
+}
+QScrollBar::handle:horizontal::pressed{ 
+    background: rgba(255,255,255,0.90);
+    border-radius:4px;
+    height:8px; 
+}
+QScrollBar::sub-page:horizontal {
+    background: #19191A;
+    border-style:flat;
+}
+QScrollBar::add-page:horizontal {
+   background: #19191A;
+    border-style:flat;
+}
+QScrollBar::sub-line:horizontal {
+   background: #19191A;
+}
+QScrollBar::add-line:horizontal{
+   background: #19191A;
+}
+
+QFrame{
+background-color: transparent;
+color: rgb(87, 154, 190);
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,1" rowminimumheight="0,1">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetFixedSize</enum>
+   </property>
+   <property name="leftMargin">
+    <number>6</number>
+   </property>
+   <property name="topMargin">
+    <number>6</number>
+   </property>
+   <property name="rightMargin">
+    <number>6</number>
+   </property>
+   <property name="bottomMargin">
+    <number>6</number>
+   </property>
+   <property name="horizontalSpacing">
+    <number>3</number>
+   </property>
+   <property name="verticalSpacing">
+    <number>6</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="TitleWidget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <item row="0" column="6">
+       <widget class="QPushButton" name="btnClose">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="image.qrc">
+          <normaloff>:/btnicon/image/btnicon/close_new.png</normaloff>:/btnicon/image/btnicon/close_new.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="labelLogo">
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QPushButton" name="btnMin">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="image.qrc">
+          <normaloff>:/btnicon/image/btnicon/min_new.png</normaloff>:/btnicon/image/btnicon/min_new.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="5">
+       <widget class="QPushButton" name="btnMax">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="image.qrc">
+          <normaloff>:/btnicon/image/btnicon/max_new.png</normaloff>:/btnicon/image/btnicon/max_new.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="labelTitle">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QPushButton" name="btnTooltip">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="image.qrc">
+          <normaloff>:/btnicon/image/btnicon/about.png</normaloff>:/btnicon/image/btnicon/about.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetFixedSize</enum>
+     </property>
+     <property name="spacing">
+      <number>0</number>
+     </property>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>

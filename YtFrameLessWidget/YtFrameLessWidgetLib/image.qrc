@@ -1,0 +1,37 @@
+<RCC>
+    <qresource prefix="/messagebox">
+        <file>image/messagebox/error.png</file>
+        <file>image/messagebox/question.png</file>
+        <file>image/messagebox/success.png</file>
+        <file>image/messagebox/warning.png</file>
+    </qresource>
+    <qresource prefix="/btnicon">
+        <file>image/btnicon/close_new.png</file>
+        <file>image/btnicon/max_new.png</file>
+        <file>image/btnicon/min_new.png</file>
+        <file>image/btnicon/res_new.png</file>
+        <file>image/btnicon/cb_close.png</file>
+        <file>image/btnicon/cb_close_disable.png</file>
+        <file>image/btnicon/cb_open.png</file>
+        <file>image/btnicon/cb_open_disable.png</file>
+        <file>image/btnicon/radio_select_disable.png</file>
+        <file>image/btnicon/radio_select_enable.png</file>
+        <file>image/btnicon/radio_unselect_disable.png</file>
+        <file>image/btnicon/radio_unselect_enable.png</file>
+        <file>image/btnicon/down_disable.png</file>
+        <file>image/btnicon/down_enable.png</file>
+        <file>image/btnicon/up_disable.png</file>
+        <file>image/btnicon/up_enable.png</file>
+        <file>image/btnicon/about.png</file>
+    </qresource>
+    <qresource prefix="/windowicon">
+        <file>image/windowsicon/Input.png</file>
+        <file>image/windowsicon/input1.png</file>
+        <file>image/windowsicon/输入.png</file>
+        <file>image/windowsicon/产品管理.png</file>
+    </qresource>
+    <qresource prefix="/datfile">
+        <file>image/dict_pinyin.dat</file>
+        <file>image/dict_pinyin_user.dat</file>
+    </qresource>
+</RCC>
